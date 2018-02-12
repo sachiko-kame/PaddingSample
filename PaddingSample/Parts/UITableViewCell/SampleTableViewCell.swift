@@ -8,9 +8,10 @@
 
 import UIKit
 //参考　https://qiita.com/arthur87/items/a1aa46e9f498d85d6546
+//XIBのラベルのClassの設定を忘れないように。
 class SampleTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var SampleTextLabel: UILabel!
+    @IBOutlet weak var SampleTextLabel: PaddingLabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

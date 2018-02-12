@@ -19,6 +19,7 @@
 		84ECE6622031DFC400B389F1 /* UITableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECE6612031DFC400B389F1 /* UITableExtension.swift */; };
 		84ECE6642031DFDE00B389F1 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECE6632031DFDE00B389F1 /* NSObjectExtension.swift */; };
 		84ECE6672031E36600B389F1 /* SampleTextArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECE6662031E36600B389F1 /* SampleTextArray.swift */; };
+		84ECE66B2031E5A500B389F1 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECE66A2031E5A500B389F1 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		84ECE6612031DFC400B389F1 /* UITableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableExtension.swift; sourceTree = "<group>"; };
 		84ECE6632031DFDE00B389F1 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		84ECE6662031E36600B389F1 /* SampleTextArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTextArray.swift; sourceTree = "<group>"; };
+		84ECE66A2031E5A500B389F1 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,8 @@
 		84ECE65B2031DF1900B389F1 /* Parts */ = {
 			isa = PBXGroup;
 			children = (
-				84ECE65D2031DF4400B389F1 /* SampleTableViewCell.swift */,
-				84ECE65E2031DF4400B389F1 /* SampleTableViewCell.xib */,
+				84ECE6692031E58300B389F1 /* UILabel */,
+				84ECE6682031E57000B389F1 /* UITableViewCell */,
 			);
 			path = Parts;
 			sourceTree = "<group>";
@@ -162,6 +164,23 @@
 				84ECE6662031E36600B389F1 /* SampleTextArray.swift */,
 			);
 			path = SampleText;
+			sourceTree = "<group>";
+		};
+		84ECE6682031E57000B389F1 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				84ECE65D2031DF4400B389F1 /* SampleTableViewCell.swift */,
+				84ECE65E2031DF4400B389F1 /* SampleTableViewCell.xib */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		84ECE6692031E58300B389F1 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				84ECE66A2031E5A500B389F1 /* PaddingLabel.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84ECE6622031DFC400B389F1 /* UITableExtension.swift in Sources */,
+				84ECE66B2031E5A500B389F1 /* PaddingLabel.swift in Sources */,
 				84ECE6642031DFDE00B389F1 /* NSObjectExtension.swift in Sources */,
 				84ECE6672031E36600B389F1 /* SampleTextArray.swift in Sources */,
 				84ECE6302031DEE900B389F1 /* ViewController.swift in Sources */,
