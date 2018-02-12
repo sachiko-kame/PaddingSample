@@ -9,10 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var myTableView: UITableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        myTableView.frame = self.view.frame
+        
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        
+//        let viewA = UIView()
+//        myTableView.tableFooterView = viewA
+//        myTableView.estimatedRowHeight = SampleTableViewCell.height
+        
+        self.view.addSubview(myTableView)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +33,26 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+
+
+extension ViewController:UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return SampleTextArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(cellTypes: [SampleTableViewCell.self, SampleTableViewCell.self])
+        let cell = tableView.dequeueReusableCell(with: SampleTableViewCell.self, for: indexPath)
+        cell.Set(Text:SampleTextArray[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return UITableViewAutomaticDimension
+    
+    }
+ 
 }
 
