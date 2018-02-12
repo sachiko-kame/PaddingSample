@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,29 +13,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SampleTableViewCell" customModule="PaddingSample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sampleText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J71-Cj-vrT" customClass="PaddingLabel" customModule="PaddingSample" customModuleProvider="target">
-                        <rect key="frame" x="26" y="11" width="268" height="28"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8G-EW-uT1">
+                        <rect key="frame" x="10" y="10" width="300" height="129.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sampletext" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwG-nC-uQC">
+                                <rect key="frame" x="5" y="5" width="290" height="119.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40868306640000002" green="0.54019282909999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QwG-nC-uQC" secondAttribute="trailing" constant="5" id="KgM-F6-xA0"/>
+                            <constraint firstItem="QwG-nC-uQC" firstAttribute="top" secondItem="x8G-EW-uT1" secondAttribute="top" constant="5" id="NBw-ho-KDK"/>
+                            <constraint firstAttribute="bottom" secondItem="QwG-nC-uQC" secondAttribute="bottom" constant="5" id="QsQ-k6-0hs"/>
+                            <constraint firstItem="QwG-nC-uQC" firstAttribute="leading" secondItem="x8G-EW-uT1" secondAttribute="leading" constant="5" id="V2O-ab-S57"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="J71-Cj-vrT" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Kmr-w8-PoN"/>
-                    <constraint firstItem="J71-Cj-vrT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="OtA-qa-4iR"/>
-                    <constraint firstItem="J71-Cj-vrT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="dek-7N-mYA"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="J71-Cj-vrT" secondAttribute="trailing" constant="10" id="s9t-pA-85P"/>
+                    <constraint firstItem="x8G-EW-uT1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3Dg-pu-sta"/>
+                    <constraint firstAttribute="bottom" secondItem="x8G-EW-uT1" secondAttribute="bottom" constant="10" id="AM9-G5-bXD"/>
+                    <constraint firstAttribute="trailing" secondItem="x8G-EW-uT1" secondAttribute="trailing" constant="10" id="GFe-zG-dw8"/>
+                    <constraint firstItem="x8G-EW-uT1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZVR-kD-ked"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="SampleTextLabel" destination="J71-Cj-vrT" id="Hi2-Ve-TRV"/>
+                <outlet property="SampleTextLabel" destination="QwG-nC-uQC" id="3Ji-3f-fEv"/>
             </connections>
         </tableViewCell>
     </objects>

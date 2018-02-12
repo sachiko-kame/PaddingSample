@@ -11,7 +11,7 @@ import UIKit
 //XIBのラベルのClassの設定を忘れないように。
 class SampleTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var SampleTextLabel: PaddingLabel!
+    @IBOutlet weak var SampleTextLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -20,11 +20,9 @@ class SampleTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    static let height:CGFloat = 60
+    static let height:CGFloat = 150
     
     func Set(Text:String){
         self.SampleTextLabel.text = Text
-        self.SampleTextLabel.layer.borderColor = UIColor.red.cgColor
-        self.SampleTextLabel.layer.borderWidth = 10
     }
 }

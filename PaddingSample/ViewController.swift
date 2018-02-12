@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 //        myTableView.estimatedRowHeight = SampleTableViewCell.height
         
         self.view.addSubview(myTableView)
-        
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +50,8 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        
        return UITableViewAutomaticDimension
     
     }
