@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//参考　https://qiita.com/arthur87/items/a1aa46e9f498d85d6546
 class SampleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var SampleTextLabel: UILabel!
@@ -23,5 +23,7 @@ class SampleTableViewCell: UITableViewCell {
     
     func Set(Text:String){
         self.SampleTextLabel.text = Text
+        self.SampleTextLabel.layer.borderColor = UIColor.red.cgColor
+        self.SampleTextLabel.layer.borderWidth = 10
     }
 }
